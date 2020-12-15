@@ -13,8 +13,15 @@ const Entry = mongoose.model(
   new Schema({
     title: String,
     extract: String,
+    pageid: Number,
     url: String,
+    original: Object,
     thumbnail: Object,
+    categories: [
+      {
+        type: Object
+      }
+    ],
     reactions: [
       {
         type: Schema.Types.ObjectId,
